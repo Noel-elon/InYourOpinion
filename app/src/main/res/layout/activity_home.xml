@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/your_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Your Name Here"
+            android:inputType="text"
+            android:singleLine="false"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:text="Answer The Following Questions:"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:text="1: What Language(s) do you code in?" />
+
+            <CheckBox
+                android:id="@+id/Java_Checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="Java_clicked"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/white"
+                android:text="Java"
+                tools:ignore="OnClick" />
+
+            <CheckBox
+                android:id="@+id/C_Checkbox"
+                android:onClick="C_clicked"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="C++"
+                tools:ignore="OnClick" />
+
+            <CheckBox
+                android:id="@+id/Python_Checkbox"
+                android:onClick="Python_clicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginLeft="16dp"
+                android:text="Python"
+                tools:ignore="OnClick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/layout_bg"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:text="2: Do you prefer coding in person or as a group? " />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/inPerson_rb"
+                    android:onClick="question2_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="16dp"
+                    android:text="In Person"
+                    tools:ignore="OnClick" />
+
+                <RadioButton
+                    android:id="@+id/inGroup_rb"
+                    android:onClick="question2_rb"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="As a Group"
+                    tools:ignore="OnClick" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:text="3: Do you feel that our EEEcoders Group can make a difference? " />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/Yes3_rb"
+                    android:onClick="question3_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="16dp"
+                    android:text="Yes"
+                    tools:ignore="OnClick" />
+
+                <RadioButton
+                    android:id="@+id/Maybe3_rb"
+                    android:onClick="question3_rb"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Maybe"
+                    tools:ignore="OnClick" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/white"
+                android:text="4: Would you Like us to have weekly meet_ups in school?" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/yes4_rb"
+                    android:onClick="question4_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="16dp"
+                    android:text="Yes"
+                    tools:ignore="OnClick" />
+
+                <RadioButton
+                    android:id="@+id/No4_rb"
+                    android:onClick="question4_rb"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="No"
+                    tools:ignore="OnClick" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/layout_bg"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:text="5: If this group is successful, would you like to build a project for Futo? " />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/sure5_rb"
+                    android:onClick="question5_rb"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="Sure Thing!"
+                    tools:ignore="OnClick" />
+
+                <RadioButton
+                    android:id="@+id/Nope5_rb"
+                    android:onClick="question5_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="16dp"
+                    android:text="Nope, who Futo epp"
+                    tools:ignore="OnClick" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                style="@android:style/Widget.Holo.Button.Toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_bg"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:onClick="SubmitButton"
+                tools:ignore="OnClick" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>
